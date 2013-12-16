@@ -108,7 +108,7 @@ app.yui.ready(function (err) {
     app.yui.use('import');
     app.yui.import = app.yui._Y.import;
 
-    app.yui.import('handlebars-base', 'pathto', function (Handlebars, pathTo) {
+    app.yui.import(['handlebars-base', 'pathto'], function (Handlebars, pathTo) {
         Handlebars.registerHelper('pathTo', pathTo(app.getRouteMap()));
     });
 
