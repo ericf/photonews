@@ -9,7 +9,7 @@
     "es6-module-transpiler": "~0.3.4",
     "express": "3.x",
     "express-annotations": "*",
-    "express-map": "*",
+    "express-map": "git://github.com/yahoo/express-map.git#pathto-umd",
     "express-slash": "~0.2.1",
     "express-state": "*",
     "express-view": "*",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-watch": "~0.5.3",
     "jshint": "~1.1.0",
     "yui-lint": "~0.1.3",

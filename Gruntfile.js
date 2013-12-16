@@ -5,6 +5,12 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        copy: {
+            pathto: {
+                src: 'node_modules/express-map/lib/pathto.js',
+                dest: 'tmp/pathto.js'
+            }
+        },
         transpile: {
             main: {
                 type: "yui",
@@ -26,9 +32,10 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-es6-module-transpiler');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-es6-module-transpiler');
 
-    grunt.registerTask('default', ['transpile']);
+    grunt.registerTask('default', ['copy', 'transpile']);
 
 };
